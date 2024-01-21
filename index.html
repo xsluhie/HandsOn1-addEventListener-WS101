@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript addEventListener() Hands-On</title>
+
+    <style>
+        body {
+            background-color: #fffacd; 
+            text-align: center;  
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            text-align: center;
+            border: 4px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px; 
+            width: 80%; 
+            margin: auto; /
+            position: relative; 
+        }
+
+        h1 {
+            background: linear-gradient(45deg, #ffc0cb, #ffff00, #87ceeb);
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid #000;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            border: 3px solid #000; /* Border color */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #button1 {
+            background-color: #ffc0cb; 
+        }
+
+        #button2 {
+            background-color: #87ceeb;
+        }
+
+        #button3 {
+            background-color: #ffff00;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>JavaScript addEventListener() Hands-On</h1>
+
+        <button id="button1">Button 1</button>
+        <button id="button2">Button 2</button>
+        <button id="button3">Button 3</button>
+    </div>
+
+    <script>
+        function handleClickButton1() {
+            alert("Button 1 was clicked!");
+            document.getElementById("button1").style.backgroundColor = "#ffff00";
+        }
+
+        function handleClickButton2() {
+            alert("Button 2 was clicked!");
+            document.getElementById("button2").style.backgroundColor = "#ffc0cb";
+        }
+
+        function handleClickButton3() {
+            alert("Button 3 was clicked!");
+            document.getElementById("button3").style.backgroundColor = "#87ceeb"; 
+        }
+
+        document.getElementById("button1").addEventListener("click", handleClickButton1);
+        document.getElementById("button2").addEventListener("click", handleClickButton2);
+        document.getElementById("button3").addEventListener("click", handleClickButton3);
+    </script>
+</body>
+</html>
